@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@400;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+:root {
+  --heading-text-color: #2d3033;
+  --p-text-color: #6c7279;
+  --btn-bg-color: #e84545;
+  --primary-color: #fff;
+  --btn-txt-color: #e84545;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  vertical-align: middle;
+}
+
+img {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+/* common class */
+.p-top {
+  padding-top: 100px;
+}
+
+.p-bottom {
+  padding-bottom: 100px;
+}
+
+/* navbar css start */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+}
+
+.bg {
+  background: #483743;
+  animation: fix 1s;
+}
+
+@keyframes fix {
+  from {
+    top: -50px;
+  }
+
+  to {
+    top: 0px;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-left: 58px;
+  transition: all linear 0.5s;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  padding: 17px 0;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #e84545;
+}
+
+/* navbar css end */
+/* banner css start */
+#banner {
+  background: url(../images/banner.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+#banner:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background: rgba(33, 37, 41, 0.85);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.banner-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.banner-txt h1 {
+  font-size: 65px;
+  color: #fff;
+  font-weight: 400;
+  padding-top: 80px;
+}
+
+.banner-txt p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  padding-top: 24px;
+}
+
+.banner-btn {
+  margin-top: 79px;
+  margin-bottom: 75px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--btn-bg-color);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 46px;
+  text-transform: uppercase;
+  border: none;
+  transition: all linear 0.4s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-color);
+  color: var(--btn-txt-color);
+}
+
+/* banner css end */
+/* service-css start */
+.service-item {
+  padding-bottom: 70px;
+}
+
+.service-item h3 {
+  font-size: 14px;
+  color: var(--heading-text-color);
+  font-weight: 600;
+  padding-top: 35px;
+  text-transform: capitalize;
+}
+
+.service-item p {
+  font-size: 14px;
+  color: var(--p-text-color);
+  padding-top: 10px;
+}
+
+/* service-css end */
+/* work part css start */
+.work-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 26, 26, 0.93);
+  transition: all 0.5s;
+}
+
+.work-item:hover .work-overlay {
+  width: 100%;
+  left: 0;
+}
+
+.work-overlay-txt {
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.work-overlay-txt h4 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.work-overlay-txt p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+/* work part css end */
+/* team css start */
+.card-body {
+  padding: 0;
+}
+
+.card {
+  border: none;
+}
+
+.card-sub-title {
+  font-size: 13px;
+  color: #e84545;
+  margin-top: -6px;
+  padding-bottom: 14px;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 400;
+  padding-top: 25px;
+}
+
+.card-icon i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 25px;
+  text-align: center;
+  color: #c6cacc;
+  border: 1px solid #c6cacc;
+  margin-right: 10px;
+  border-radius: 3px;
+  transition: all linear 0.3s;
+  margin-top: 8px;
+}
+
+.card-icon i:hover {
+  color: #fff;
+  background: #e84545;
+  border-radius: 10px;
+  border-color: #e84545;
+}
+
+/* team css end */
+/* feedback/client css */
+.client {
+  background: #483743;
+}
+section#feedback {
+  overflow-x: hidden;
+}
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.carousel-item h4 {
+  color: var(--primary-color);
+  padding: 0 10px;
+  font-family: "Cardo", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.carousel-inner {
+  padding: 98px 15px;
+}
+
+.carousel-item p {
+  font-size: 15px;
+  color: var(--primary-color);
+  padding: 0 10px;
+  margin-top: 20px;
+}
+.client-img {
+  margin-left: -150px;
+  text-align: right;
+}
+/* feedback/client end*/
+/* download css start */
+.download-btn .btn-primary:hover {
+  background: var(--p-text-color);
+  color: var(--primary-color);
+}
+
+/* download css end */
+
+/* footer css start  */
+#footer {
+  background: #3a3e64;
+}
+
+.footer-item h4 {
+  color: var(--primary-color);
+}
+
+.footer-item p {
+  color: var(--primary-color);
+}
+
+/* footer css end */
+/* copy right css start */
+#copyright {
+  background: #313454;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.copyright-txt p {
+  color: var(--p-text-color);
+}
+
+.copyright-txt p span {
+  color: var(--primary-color);
+}
+
+.copyright-txt p i {
+  color: red;
+}
+
+/* copy right css end */
